@@ -26,7 +26,8 @@ final class srcTests: XCTestCase {
         let data = pipe.fileHandleForReading.readDataToEndOfFile()
         let output = String(data: data, encoding: .utf8)
 
-        XCTAssertEqual(output, "Hello, world!\n")
+        // 一致しない比較 このテストは失敗する
+        XCTAssertEqual(output, "Hell, world!\n")
     }
 
     /// Returns path to the built products directory.
